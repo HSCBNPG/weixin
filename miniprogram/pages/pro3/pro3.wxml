@@ -1,2 +1,46 @@
-<!--pages/pro3/pro3.wxml-->
-<text>pages/pro3/pro3.wxml</text>
+<view class="fu">
+  <view class="user">
+    <view class="filter" style="background-image:url({{userImage}});"></view>
+    <view class="user-image">
+      <image src="{{userImage}}"></image>
+    </view>
+    <view class="user-name">
+      <open-data type="userNickName" lang="en"></open-data>
+    </view>
+  </view>
+  <view class="liebiao">
+    <van-tabs swipeable color="#5edfff" line-width="30"
+     tab-active-class="aaa" 
+     nav-class="ccc"
+     duration="0.2"
+     custom-class="bbb">
+      <!-- 歌曲播放器 -->
+      <view></view>
+      <van-tab title="播放列表">
+        <view class="lie">
+          <!-- 歌曲 -->
+          <view class="au"
+            wx:for="{{songs}}"
+            wx:key="index"
+            data-url="{{songs[index].url}}"
+            bindtap="creat">
+            <view class="hao">{{index+1}}</view>
+            <view class="zuo" data-url="{{songs[index].url}}">
+              <view data-url="{{songs[index].url}}">歌曲名</view>
+              <view data-url="{{songs[index].url}}" class="singer">歌手名</view>
+            </view>
+            <view class="you">
+              <van-icon size="50rpx" name="play-circle-o"></van-icon>
+              <van-icon custom-class="gengduo" size="50rpx" name="ellipsis"></van-icon>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="收藏">
+        <view class="lie">
+          sdasdasd
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

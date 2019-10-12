@@ -1,1 +1,102 @@
 /* pages/pro3/pro3.wxss */
+.page{
+  height: 100%;
+  overflow: hidden;
+}
+.fu{
+  height: 100%;
+  overflow: hidden;
+}
+.user{
+  position: relative;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.filter{
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(10rpx);
+  z-index: -1;
+}
+.user-image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8rpx solid #b2fcff;
+}
+.user-image>image{
+  width: 100%;
+  height: 100%;
+}
+.user-name{
+  text-align: center;
+  color: white;
+}
+/* 列表 */
+.liebiao{
+  width: 100%;
+  height: 70vh;
+  background: white;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  overflow: hidden;
+}
+.lie{
+  width: 100%;
+  height: 60vh;
+}
+.aaa{
+  color: #5edfff !important;
+}
+.bbb{
+  padding: 0px 5%;
+}
+.van-hairline--top-bottom:after {
+  border-bottom:1.5px solid rgb(209, 209, 209) !important;
+}
+/* 音频列表 */
+.au{
+  width: 100%;
+  height: 120rpx;
+  background: transparent;
+  border-bottom: 1.2px solid rgb(209, 209, 209);
+  display: flex;
+  justify-content: space-between;
+}
+.hao{
+  width: 8%;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgb(158, 157, 157)
+}
+.you{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.zuo{
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.singer{
+  font-size: 30rpx;
+  color: rgb(158, 157, 157)
+}
+.gengduo{
+  transform: rotate(90deg);
+  color: rgb(158, 157, 157)
+}
