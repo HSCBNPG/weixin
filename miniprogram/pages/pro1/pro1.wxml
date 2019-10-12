@@ -1,2 +1,69 @@
-<!--pages/pro1/pro1.wxml-->
-<text>pages/pro1/pro1.wxml</text>
+<view class="container">
+  <!-- 搜索 -->
+  <view class="search com">
+    <text class="w-font">音乐馆</text>
+    <van-search
+      placeholder="搜索"
+      custom-class="s-container"  
+      field-class="s-field"
+      input-class="s-input"
+    ></van-search>
+    <text class="iconfont icon-tinggeshiqu sang"></text>
+  </view>
+  <!-- 轮播图 -->
+  <view class="lunbo com">
+    <swiper
+      indicator-dots="{{indicatorDots}}" 
+      autoplay="{{autoplay}}"
+      indicator-color="rgba(236,252,255,.5)"
+      indicator-active-color="rgba(94,223,255,.78)"
+      circular="true"
+      bindchange="changeS"
+      bindtransition="changeT"
+    >
+      <swiper-item item-id="aa" wx:for="{{imagesList}}"
+       wx:key="{{index}}">
+        <image src="{{item.url}}" class="lunbo-image"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航卡 -->
+  <view class="card">
+    <view class="card-k">
+      <text class="iconfont icon-geshou"></text>
+      <view>歌手</view>
+    </view>
+    <view class="card-k">
+      <text class="iconfont icon-paihang-activate"></text>
+      <view>排行</view>
+    </view>
+    <view class="card-k">
+      <text class="iconfont icon-fenlei-xuanzhong"></text>
+      <view>分类歌单</view>
+    </view>
+    <view class="card-k">
+      <text class="iconfont icon-diantai"></text>
+      <view>电台</view>
+    </view>
+    <view class="card-k">
+      <text class="iconfont icon-rili1"></text>
+      <view>每日推荐</view>
+    </view>
+  </view>
+  <!-- 推荐歌单 -->
+  <view class="tuijian">
+    <view class="daohang">推荐歌单 
+      <navigator url="/pages/pro2/pro2" open-type="switchTab" hover-class="other-navigator-hover">更多</navigator>
+    </view>
+    <!-- 推荐框根元素 -->
+    <view class="abcd">
+      <scroll-view scroll-x="true">
+      <view style="display:flex;">
+        <view class="gedan-fu" wx:for="{{num}}" wx:key="{{index}}">
+          <image class="gedan" src="/images/shouye0.png"></image>
+        </view>
+      </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

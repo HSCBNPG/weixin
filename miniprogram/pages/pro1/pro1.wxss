@@ -1,1 +1,136 @@
 /* pages/pro1/pro1.wxss */
+.search{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.w-font{
+  font-weight: bold;
+  font-size: 50rpx;
+}
+.s-container,.s-container>view{
+  padding: 0px !important;
+}
+.s-field{   /*搜索框样式类*/
+  background: red;
+  border-radius: 38rpx;
+  text-align: center !important;
+  margin: 0 auto !important;
+  color:blue !important;
+}
+.s-field  .van-cell__left-icon-wrap{
+  position: relative !important;
+  left: 35% !important;
+}
+.van-cell{
+  padding: 0px !important;
+}
+/*输入框样式类*/
+.s-input{
+  text-align: center !important;
+}
+.search>image{
+  width: 50rpx;
+  height: 50rpx;
+}
+@import "/iconfont/tigeshiqu/stylesheet.wxss";
+@import "/iconfont/stylesheet.wxss";
+@import "/iconfont/card/stylesheet.wxss";
+@import "/iconfont/rili/stylesheet.wxss";
+@import "/iconfont/rili/stylesheet2.wxss";
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 50rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tinggeshiqu:before {
+  content: "\e77e";
+}
+.icon-geshou:before {
+  content: "\e79f";
+}
+.icon-geshou:before {
+  content: "\e79f";
+}
+.icon-paihang-activate:before {
+  content: "\e507";
+}
+.icon-rili:before {
+  content: "\e6b3";
+}
+.icon-rili2:before {
+  content: "\e6d2";
+}
+.icon-rili1:before {
+  content: "\e61e";
+}
+.icon-fenlei-xuanzhong:before {
+  content: "\e60b";
+}
+.icon-diantai:before {
+  content: "\e64d";
+}
+.lunbo{
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.lunbo-image{
+  border-radius: 20rpx;
+  width: 90%;
+  height:100%;
+}
+/* card */
+.card{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.card-k{
+  width: 20%;
+  text-align: center;
+  font-size: 35rpx;
+}
+.card-k>text{
+  color: #3e64ff;
+}
+/* 推荐 */
+.tuijian{
+  width: 100%;
+}
+.daohang{
+  width: 90%;
+  display: flex;
+  
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.abcde{
+  width: 10%;
+  height: 30rpx;
+}
+.abc{
+  /* display: inline-block; */
+  width: 30rpx;
+  height: 30rpx;
+  background: red;
+}
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}
+/* 歌单 */
+.gedan-fu{
+  display: inline-block;
+  margin-left: 5%;
+}
+.gedan{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid red;
+  border-radius: 20rpx;
+}
