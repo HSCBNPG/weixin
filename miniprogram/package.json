@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsmediatags": "^3.9.2",
     "vant-weapp": "^1.0.0-beta.0"
   }
 }

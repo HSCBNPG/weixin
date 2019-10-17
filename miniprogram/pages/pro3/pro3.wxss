@@ -1,4 +1,6 @@
 /* pages/pro3/pro3.wxss */
+@import "/iconfont/list/iconfont.wxss";
+@import "/iconfont/s-x/iconfont.wxss";
 .page{
   height: 100%;
   overflow: hidden;
@@ -91,6 +93,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.title{
+  overflow-y: hidden;
 }
 .singer{
   font-size: 30rpx;

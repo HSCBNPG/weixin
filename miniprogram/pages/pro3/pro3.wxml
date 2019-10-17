@@ -2,7 +2,8 @@
   <view class="user">
     <view class="filter" style="background-image:url({{userImage}});"></view>
     <view class="user-image">
-      <image src="{{userImage}}"></image>
+      <open-data type="userAvatarUrl"></open-data>
+      <!-- <image src="{{userImage}}"></image> -->
     </view>
     <view class="user-name">
       <open-data type="userNickName" lang="en"></open-data>
@@ -15,23 +16,42 @@
      duration="0.2"
      custom-class="bbb">
       <!-- 歌曲播放器 -->
-      <view></view>
+      <view>
+        <!-- 播放顺序 -->
+        <text
+         class="iconfont {{state==1?'icon-shunxubofang':state==2?'icon-suiji':state==3?'icon-suiji1':'icon-danquxunhuan'}}"
+         bindtap="changeState">
+        </text>
+        <!-- 上一曲 -->
+        <text bindtap="shang" class="iconfont icon-shangyishou"></text>
+        <!-- 下一曲-->
+        <text bindtap="xia" class="iconfont icon-xiayishou"></text>
+      </view>
       <van-tab title="播放列表">
+
         <view class="lie">
           <!-- 歌曲 -->
           <view class="au"
             wx:for="{{songs}}"
             wx:key="index"
-            data-url="{{songs[index].url}}"
-            bindtap="creat">
+            >
             <view class="hao">{{index+1}}</view>
-            <view class="zuo" data-url="{{songs[index].url}}">
-              <view data-url="{{songs[index].url}}">歌曲名</view>
-              <view data-url="{{songs[index].url}}" class="singer">歌手名</view>
+            <!-- 播放区域 -->
+            <view class="zuo"
+             bindtap="creat"
+             data-index="{{index}}">
+              <view class="title">{{songs[index].title}}</view>
+              <view class="singer">{{songs[index].singer}}</view>
             </view>
             <view class="you">
-              <van-icon size="50rpx" name="play-circle-o"></van-icon>
-              <van-icon custom-class="gengduo" size="50rpx" name="ellipsis"></van-icon>
+              <van-icon size="50rpx"
+               data-index="{{index}}"
+               bind:click="change"
+               name="{{music&&songIndex==index?'pause-circle-o':'play-circle-o'}}">
+              </van-icon>
+              <van-icon custom-class="gengduo"
+               size="50rpx"
+                name="ellipsis"></van-icon>
             </view>
           </view>
         </view>
