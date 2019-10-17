@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5617973",
+      "name": "下一首",
+      "font_class": "xiayishou",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "5617976",
+      "name": "上一首",
+      "font_class": "shangyishou",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    }
+  ]
+}
